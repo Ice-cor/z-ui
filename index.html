@@ -9,9 +9,12 @@
 </head>
 
 <style>
-    *{margin: 0;padding: 0;}
+    * {
+        margin: 0;
+        padding: 0;
+    }
 
-    :root{
+    :root {
         --button-height: 32px;
         --font-size: 14px;
         --button-bg: white;
@@ -21,16 +24,31 @@
         --border-color: #999;
         --border-color-hover: #666;
     }
-    #app{
+
+    #app {
         margin: 20px;
     }
- 
+
+    .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+    }
 </style>
+
 <body>
-    <div id=app> 
-        <z-button></z-button>
+    <div id=app>
+        <z-button>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-set"></use>
+            </svg>
+            你好呀
+        </z-button>
     </div>
     <script src="./src/app.js"></script>
+    <script src="//at.alicdn.com/t/font_1019465_e12ewfpur7d.js"></script>
 </body>
 
 </html>

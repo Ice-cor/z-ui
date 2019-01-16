@@ -1,5 +1,7 @@
 <template>
-    <button class="z-button">按钮</button>
+    <button class="z-button">
+      <slot>按钮</slot>
+    </button>
 </template>
 
 <script>
