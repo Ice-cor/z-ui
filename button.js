@@ -1,5 +1,5 @@
 Vue.component('z-button',{
     template: `
-        <button>nihaoya</button>
+        <button class="g-button">nihaoya</button>
     `
 });
