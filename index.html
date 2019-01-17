@@ -1,54 +1,48 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>z-ui</title>
-</head>
+  </head>
 
-<style>
+  <style>
     * {
-        margin: 0;
-        padding: 0;
+      margin: 0;
+      padding: 0;
     }
-
     :root {
-        --button-height: 32px;
-        --font-size: 14px;
-        --button-bg: white;
-        --button-active-bg: #eee;
-        --border-radius: 4px;
-        --color: #333;
-        --border-color: #999;
-        --border-color-hover: #666;
+      --button-height: 32px;
+      --font-size: 14px;
+      --button-bg: white;
+      --button-active-bg: #eee;
+      --border-radius: 4px;
+      --color: #333;
+      --border-color: #999;
+      --border-color-hover: #666;
     }
-
     #app {
-        margin: 20px;
+      margin: 20px;
     }
 
     .icon {
-        width: 1em;
-        height: 1em;
-        vertical-align: -0.15em;
-        fill: currentColor;
-        overflow: hidden;
+      width: 1em;
+      height: 1em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
     }
-</style>
+  </style>
 
-<body>
-    <div id=app>
-        <z-button>
-            <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-set"></use>
-            </svg>
-            你好呀
-        </z-button>
+  <body>
+    <div id="app">
+      <z-button> 你好呀 </z-button>
+      <z-button name="set"> 你好呀 </z-button>
+      <z-button name="set" position="right"> 你好呀 </z-button>
+      <z-button :loading="true"> 你好呀 </z-button>
     </div>
     <script src="./src/app.js"></script>
-    <script src="//at.alicdn.com/t/font_1019465_e12ewfpur7d.js"></script>
-</body>
-
+    <script src="//at.alicdn.com/t/font_1019465_2i0cffe8dmx.js"></script>
+  </body>
 </html>
