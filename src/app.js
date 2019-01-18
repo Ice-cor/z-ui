@@ -1,25 +1,27 @@
 import Vue from 'vue'
 import Button from './button'
 import Icon from './icon'
+import ButtonGroup from './button-group'
 
 Vue.component('z-button', Button)
 Vue.component('z-icon', Icon)
+Vue.component('z-button-group', ButtonGroup)
 
 new Vue({
   el: '#app',
   data() {
     return {
       loading: false,
-      loading1: true,
+      loading1: true
     }
   },
   methods: {
-    enterLoading(){
+    enterLoading() {
       this.loading = true
-      let timeID = setTimeout(_=>{
+      let timeID = setTimeout(_ => {
         this.loading = false
         clearTimeout(timeID)
-      },2000)
+      }, 2000)
     }
-  },
+  }
 })

@@ -4,8 +4,16 @@
     :disabled="loading"
     @click="$emit('click')"
   >
-    <z-icon :class="['icon','loading',position]" v-if="loading" name="loading"></z-icon>
-    <z-icon :class="['icon',position]" v-if="name && !loading" :name="name"></z-icon>
+    <z-icon
+      :class="['icon','loading',position]"
+      v-if="loading"
+      name="loading"
+    ></z-icon>
+    <z-icon
+      :class="['icon',position]"
+      v-if="name && !loading"
+      :name="name"
+    ></z-icon>
     <div class="content">
       <slot>按钮</slot>
     </div>
@@ -18,10 +26,10 @@ export default {
     name: {},
     position: {
       type: String,
-      default: "left",
+      default: 'left',
       validator: function(value) {
         // 这个值必须匹配下列字符串中的一个
-        return ["left", "right"].indexOf(value) !== -1;
+        return ['left', 'right'].indexOf(value) !== -1
       }
     },
     loading: {
@@ -29,15 +37,15 @@ export default {
       default: false,
       validator: function(value) {
         // 这个值必须匹配下列字符串中的一个
-        return [true, false].indexOf(value) !== -1;
+        return [true, false].indexOf(value) !== -1
       }
     }
   },
-  name: "g-button",
+  name: 'g-button',
   data() {
-    return {};
+    return {}
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
@@ -54,6 +62,8 @@ export default {
   cursor: pointer;
   &:hover {
     border-color: var(--border-color-hover);
+    // border-color: red;
+    z-index: 1;
   }
   &:active {
     background-color: var(--button-active-bg);

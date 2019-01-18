@@ -9,9 +9,9 @@
 
 <script>
 export default {
-  name: "z-icon",
-  props: ["name"]
-};
+  name: 'z-icon',
+  props: ['name']
+}
 </script>
 
 <style lang="scss">
