@@ -2,9 +2,10 @@
   <button
     class="z-button"
     :disabled="loading"
+    @click="$emit('click')"
   >
     <svg
-      :class="['icon','loading']"
+      :class="['icon','loading',position]"
       aria-hidden="true"
       v-if="loading"
     >
@@ -13,14 +14,13 @@
     <svg
       :class="['icon',position]"
       aria-hidden="true"
-      v-if="name"
+      v-if="name && !loading"
     >
       <use :xlink:href="`#icon-${name}`"></use>
     </svg>
     <div class="content">
       <slot>按钮</slot>
     </div>
-
   </button>
 </template>
 
@@ -30,10 +30,10 @@ export default {
     name: {},
     position: {
       type: String,
-      default: 'left',
+      default: "left",
       validator: function(value) {
         // 这个值必须匹配下列字符串中的一个
-        return ['left', 'right'].indexOf(value) !== -1
+        return ["left", "right"].indexOf(value) !== -1;
       }
     },
     loading: {
@@ -41,15 +41,15 @@ export default {
       default: false,
       validator: function(value) {
         // 这个值必须匹配下列字符串中的一个
-        return [true, false].indexOf(value) !== -1
+        return [true, false].indexOf(value) !== -1;
       }
     }
   },
-  name: 'g-button',
+  name: "g-button",
   data() {
-    return {}
+    return {};
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -63,6 +63,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   &:hover {
     border-color: var(--border-color-hover);
   }
@@ -72,8 +73,9 @@ export default {
   &:focus {
     outline: none;
   }
-  &:disabled{
-    background-color: #999;
+  &:disabled {
+    background-color: white;
+    cursor: default;
   }
   > .icon {
     order: 1;
