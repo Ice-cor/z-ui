@@ -4,20 +4,8 @@
     :disabled="loading"
     @click="$emit('click')"
   >
-    <svg
-      :class="['icon','loading',position]"
-      aria-hidden="true"
-      v-if="loading"
-    >
-      <use :xlink:href="`#icon-loading`"></use>
-    </svg>
-    <svg
-      :class="['icon',position]"
-      aria-hidden="true"
-      v-if="name && !loading"
-    >
-      <use :xlink:href="`#icon-${name}`"></use>
-    </svg>
+    <z-icon :class="['icon','loading',position]" v-if="loading" name="loading"></z-icon>
+    <z-icon :class="['icon',position]" v-if="name && !loading" :name="name"></z-icon>
     <div class="content">
       <slot>按钮</slot>
     </div>
