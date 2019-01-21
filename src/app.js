@@ -25,3 +25,43 @@ new Vue({
     }
   }
 })
+
+import chai from 'chai'
+//单元测试
+const expect = chai.expect
+{
+  const Constructor = Vue.extend(Button)
+  const vm = new Constructor({
+    propsData: {
+      name: 'set'
+    }
+  })
+  vm.$mount()
+
+  let useElement = vm.$el.querySelector('use')
+
+  let href = useElement.getAttribute('xlink:href')
+  expect(href).to.eq('#icon-set')
+  vm.$el.remove()
+  vm.$destroy()
+  // vm.beforeDestroy = function(){
+  //   console.log(222)
+  // }
+}
+
+// {
+//   const Constructor = Vue.extend(Button)
+//   const vm = new Constructor({
+//     propsData: {
+//       name: 'set'
+//     }
+//   })
+//   vm.$mount('#test')
+
+//   let useElement = vm.$el.querySelector('use')
+
+//   let href = useElement.getAttribute('xlink:href')
+//   expect(href).to.eq('#icon-set')
+//   vm.$el.remove()
+//   vm.$destroy()
+// }
