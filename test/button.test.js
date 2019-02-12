@@ -13,7 +13,7 @@ const expect = chai.expect;
          const Constructor = Vue.extend(Button)
          const vm = new Constructor({
          propsData: {
-             icon: 'set'
+             name: 'set'
          }
          }).$mount()
          const useElement = vm.$el.querySelector('use')
@@ -24,7 +24,7 @@ const expect = chai.expect;
          const Constructor = Vue.extend(Button)
          const vm = new Constructor({
          propsData: {
-             icon: 'set',
+            name: 'set',
              loading: true
          }
          }).$mount()
@@ -39,7 +39,7 @@ const expect = chai.expect;
          const Constructor = Vue.extend(Button)
          const vm = new Constructor({
          propsData: {
-             icon: 'set',
+            name: 'set',
          }
          }).$mount(div)
          const icon = vm.$el.querySelector('svg')
@@ -53,8 +53,8 @@ const expect = chai.expect;
          const Constructor = Vue.extend(Button)
          const vm = new Constructor({
          propsData: {
-             icon: 'set',
-             iconPosition: 'right'
+            name: 'set',
+            position: 'right'
          }
          }).$mount(div)
          const icon = vm.$el.querySelector('svg')
@@ -66,7 +66,7 @@ const expect = chai.expect;
          const Constructor = Vue.extend(Button)
          const vm = new Constructor({
          propsData: {
-             icon: 'set',
+            name: 'set',
          }
          }).$mount()
 
