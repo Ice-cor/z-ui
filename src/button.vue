@@ -60,6 +60,7 @@ export default {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  margin-right: 5px;
   &:hover {
     border-color: var(--border-color-hover);
     // border-color: red;

@@ -13,6 +13,7 @@ export default {
   display: inline-flex;
   > .z-button {
     border-radius: 0;
+    margin-right: 0;
     &:first-child {
       border-top-left-radius: var(--border-radius);
       border-bottom-left-radius: var(--border-radius);
