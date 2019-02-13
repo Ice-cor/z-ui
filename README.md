@@ -9,5 +9,8 @@ npm run test 运行打包测试
 
 ## 使用TravisCI 持续集成测试
 
+## 已经npm发包
+
+npm install z-ui-0-1
 
 
