@@ -1,6 +1,6 @@
 <template>
   <button
-    class="z-button"
+    class="z-button shabi"
     :disabled="loading"
     @click="$emit('click')"
   >
