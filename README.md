@@ -1,12 +1,36 @@
-## 这是练习作品
-为了深入理解vue，写一套轮子作品
+
+
+## 介绍 
 [![Build Status](https://www.travis-ci.org/Ice-cor/z-ui.svg?branch=master)](https://www.travis-ci.org/Ice-cor/z-ui)
 
-## 介绍
+为了深入理解vue，写一套轮子作品
 
 ## 开始使用
 
-1. 安装
+1. 添加css样式
+
+使用框架前，请再css中开启border-box。
+
+2. 安装 z-ui
+
+```javascript
+npm install z-ui-0-1 --save
+```
+
+3. 引入z-ui
+
+```javascript
+import {Button} from 'z-ui-0-1'
+import 'z-ui-0-1/dist/index.css'
+
+export default {
+  components: {
+    'z-button': Button
+  }
+}
+```
+
+
 
 ## 文档
 

@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import './svg'
 export default {
   name: 'z-icon',
   props: ['name']
