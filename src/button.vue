@@ -60,6 +60,7 @@ export default {
   padding: 0 1em;
   border-radius: var(--border-radius);
   border: 1px solid var(--border-color);
+  color:var(--color);
   background: var(--button-bg);
   display: flex;
   justify-content: center;
@@ -67,12 +68,15 @@ export default {
   cursor: pointer;
   margin-right: 5px;
   &:hover {
+    background-color: var(--button-hover-bg);
     border-color: var(--border-color-hover);
-    // border-color: red;
+    color: var(--color-hover);
     z-index: 1;
   }
   &:active {
     background-color: var(--button-active-bg);
+    border-color: var(--border-color-active);
+    color: var(--color-hover);
   }
   &:focus {
     outline: none;

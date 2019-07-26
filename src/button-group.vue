@@ -17,13 +17,16 @@ export default {
     &:first-child {
       border-top-left-radius: var(--border-radius);
       border-bottom-left-radius: var(--border-radius);
+      // border-right: 1px solid black;
+      border-right: 1px solid var(--border-color-active)
+
     }
     &:last-child {
       border-top-right-radius: var(--border-radius);
       border-bottom-right-radius: var(--border-radius);
     }
-    &:not(:first-child){
-      margin-left: -1px;
+    &:not(:first-child) {
+      // margin-left: -1px;
     }
   }
 }
