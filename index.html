@@ -17,13 +17,15 @@
       --font-size: 14px;
       --button-bg: #fff;
       --button-hover-bg: #EFF3FF;
-      --button-active-bg: #CED8F4;
+      --button-active-bg: #DEE6FF;
+      --button-focus-bg: #CED8F4;
       --border-radius: 4px;
       --color: #333;
       --color-hover: #3366FF;
       --border-color: #999;
-      --border-color-hover: #3366FF;
-      --border-color-active: #3366FF;
+      --border-hover-color: #3366FF;
+      --border-active-color: #3366FF;
+      --border-focus-color: #3366FF;
     }
     #app {
       margin: 20px;
@@ -46,9 +48,10 @@
         </z-button-group>
       </div>
       <div>
-          <z-input value="hello word"></z-input>
+          <z-input value="hello word" placeholder="123"></z-input>
           <z-input value="hello word" disabled></z-input>
           <z-input value="hello word" readonly></z-input>
+          <z-input value="hello word" error="不能少于两个字"></z-input>
       </div>
       
     </div>

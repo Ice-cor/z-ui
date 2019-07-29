@@ -60,7 +60,7 @@ export default {
   padding: 0 1em;
   border-radius: var(--border-radius);
   border: 1px solid var(--border-color);
-  color:var(--color);
+  color: var(--color);
   background: var(--button-bg);
   display: flex;
   justify-content: center;
@@ -69,16 +69,19 @@ export default {
   margin-right: 5px;
   &:hover {
     background-color: var(--button-hover-bg);
-    border-color: var(--border-color-hover);
+    border-color: var(--border-hover-color);
     color: var(--color-hover);
     z-index: 1;
   }
   &:active {
     background-color: var(--button-active-bg);
-    border-color: var(--border-color-active);
+    border-color: var(--border-active-color);
     color: var(--color-hover);
   }
   &:focus {
+    // background-color: var(--button-hover-bg);
+    // border-color: var(--border-hover-color);
+    // color: var(--color-hover);
     outline: none;
   }
   &:disabled {

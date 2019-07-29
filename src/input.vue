@@ -1,18 +1,33 @@
 <template>
-  <div class="wrapper">
+  <div
+    class="wrapper"
+    :class="{error}"
+  >
     <input
       type="text"
+      :placeholder="placeholder"
       :value="value"
       :disabled="disabled"
       :readonly="readonly"
-    >
+    />
+    <template v-if="error">
+      <icon name="error"></icon>
+      <span>{{error}}</span>
+    </template>
   </div>
 </template>
 
 <script>
+import Icon from './icon'
 export default {
+  components: {
+    Icon,
+  },
   props: {
     value: {
+      type: String
+    },
+    placeholder: {
       type: String
     },
     disabled: {
@@ -24,7 +39,7 @@ export default {
       default: false
     },
     error: {
-      type: String,
+      type: String
     }
   },
   data() {
@@ -40,10 +55,15 @@ $border-color: #999;
 $border-color-hover: #666;
 $border-radius: 4px;
 $box-shadow-color: rgba(0, 0, 0, 0.5);
+$color-danger: #F73D71;
 .wrapper {
   font-size: $font-size;
-  padding: 12px;
-  display: inline-flex;
+  // padding: 12px;
+  margin-top: 12px;
+  display: inline-block;
+  >:not(:last:child){
+    margin-right: .5em;
+  }
   > input {
     height: $height;
     border: 1px solid $border-color;
@@ -63,6 +83,17 @@ $box-shadow-color: rgba(0, 0, 0, 0.5);
     }
     &[readonly] {
       cursor: not-allowed;
+    }
+  }
+  &.error {
+    & > input {
+      border-color: $color-danger;
+    }
+    svg{
+      fill: $color-danger;
+    }
+    span{
+      color: $color-danger;
     }
   }
 }
